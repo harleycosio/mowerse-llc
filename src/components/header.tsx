@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Navbar from "./navbar"
 
-import * as styles from "../styles/index.css"
+import * as styles from "../styles/custom.css"
 
 export default function Header() {
   return (

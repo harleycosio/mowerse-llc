@@ -3,7 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import { lightThemeClass, darkThemeClass } from "../styles/themes.css"
 import "../styles/global.css"
 import { useColorScheme } from "../hooks/use-color-scheme"
-import * as styles from "../styles/index.css"
+import * as styles from "../styles/custom.css"
 import Header from "../components/header"
 import { StaticImage } from "gatsby-plugin-image"
 
