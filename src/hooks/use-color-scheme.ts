@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react"
 
 const query = (mode: string) => `(prefers-color-scheme: ${mode})`
-const darkQuery = window.matchMedia?.(query(`dark`))
-const lightQuery = window.matchMedia?.(query(`light`))
+
+const isBrowser = typeof window !== "undefined"
 
 export const useColorScheme = () => {
+  if (!isBrowser) {
+    return
+  }
+  const darkQuery = window.matchMedia?.(query(`dark`))
+  const lightQuery = window.matchMedia?.(query(`light`))
+
   const isDark = darkQuery?.matches
   const isLight = lightQuery?.matches
 
