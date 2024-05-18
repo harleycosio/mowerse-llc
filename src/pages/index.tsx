@@ -2,17 +2,14 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { lightThemeClass, darkThemeClass } from "../styles/themes.css"
 import "../styles/global.css"
-import { useColorScheme } from "../hooks/use-color-scheme"
 import * as styles from "../styles/custom.css"
 import Header from "../components/header"
 import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage: React.FC<PageProps> = () => {
-  const scheme = useColorScheme()
-  const schemeClass = scheme === `dark` ? darkThemeClass : lightThemeClass
   const [variant, setVariant] = React.useState<"default" | "invert">(`default`)
   return (
-    <div className={[schemeClass, styles.wrapper].join(` `)}>
+    <div className={[, styles.wrapper].join(` `)}>
       <Header></Header>
       <main className={styles.innerWrapper}>
         <div className={styles.leftCol}>
